@@ -13,6 +13,7 @@
 	<string name="message">Message</string>
 	<string name="send">Send</string>
 	<string name="send_failed">Send failed</string>
+	<string name="sent">Sent</string>
 	<string name="user_not_found">User not found</string>
 
 	<string name="private_shout_to">Private shout to:&#160;</string>

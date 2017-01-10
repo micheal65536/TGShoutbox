@@ -174,8 +174,9 @@ public class MainActivity extends AppCompatActivity implements UpdateReceiver
 		findViewById(R.id.button_send).setOnClickListener(new View.OnClickListener()
 		{
 			@Override
-			public void onClick(View view)
+			public void onClick(final View view)
 			{
+				view.setEnabled(false);
 				new AsyncTask<Void, Void, Boolean>()
 				{
 					@Override
@@ -197,11 +198,13 @@ public class MainActivity extends AppCompatActivity implements UpdateReceiver
 					@Override
 					protected void onPostExecute(Boolean aBoolean)
 					{
+						view.setEnabled(true);
 						if (aBoolean)
 						{
 							MainActivity.this.set_action(false);
 							MainActivity.this.set_pm(-1, true);
 							((EditText) MainActivity.this.findViewById(R.id.edittext_message)).setText("");
+							Toast.makeText(MainActivity.this, R.string.sent, Toast.LENGTH_SHORT).show();
 						}
 						else
 						{
