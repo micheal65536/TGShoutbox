@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent">
+	<LinearLayout android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:layout_centerInParent="true"
+				  android:layout_margin="50dp"
+				  android:orientation="vertical">
+		<ImageView android:layout_width="fill_parent"
+				   android:layout_height="0dp"
+				   android:layout_marginBottom="50dp"
+				   android:layout_weight="1"
+				   android:adjustViewBounds="true"
+				   android:contentDescription="@string/therian_guide"
+				   android:scaleType="fitCenter"
+				   android:src="@drawable/logo"/>
+		<LinearLayout android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:orientation="horizontal">
+			<EditText android:id="@+id/edittext_username"
+					  android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:layout_margin="@dimen/margin"
+					  android:layout_weight="1"
+					  android:hint="@string/username"
+					  android:imeOptions="actionNext|flagNoExtractUi"
+					  android:inputType="textNoSuggestions"
+					  android:theme="@style/AppTheme.EditText"/>
+			<EditText android:id="@+id/edittext_password"
+					  android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:layout_margin="@dimen/margin"
+					  android:layout_weight="1"
+					  android:hint="@string/password"
+					  android:imeOptions="actionGo|flagNoExtractUi"
+					  android:inputType="textPassword"
+					  android:theme="@style/AppTheme.EditText"/>
+		</LinearLayout>
+		<LinearLayout android:layout_width="fill_parent"
+					  android:layout_height="wrap_content"
+					  android:orientation="horizontal">
+			<Space android:layout_width="0dp"
+				   android:layout_height="0dp"
+				   android:layout_weight="1"/>
+			<Button android:id="@+id/button_login"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					android:text="@string/login"
+					android:theme="@style/AppTheme.Button"/>
+			<Space android:layout_width="0dp"
+				   android:layout_height="0dp"
+				   android:layout_weight="1"/>
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

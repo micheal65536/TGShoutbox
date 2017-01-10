@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="AppTheme"
+		   parent="Theme.AppCompat.Light">
+		<item name="android:windowBackground">@color/background</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textColorPrimary">@color/title</item>
+		<item name="android:textColorHighlight">@color/highlight</item>
+		<item name="colorPrimary">@color/highlight</item>
+		<item name="colorPrimaryDark">@color/highlight_dark</item>
+		<item name="colorAccent">@color/highlight_secondary</item>
+		<item name="colorControlNormal">@color/highlight</item>
+		<item name="colorControlHighlight">@color/highlight</item>
+		<item name="colorControlActivated">@color/highlight</item>
+		<item name="colorButtonNormal">@color/highlight</item>
+		<item name="buttonStyle">@style/AppTheme.Button</item>
+		<item name="editTextStyle">@style/AppTheme.EditText</item>
+		<item name="actionBarPopupTheme">@style/AppTheme.Menu</item>
+		<item name="actionOverflowMenuStyle">@style/AppTheme.Menu</item>
+		<item name="android:itemTextAppearance">@style/AppTheme.Menu.TextAppearance</item>
+		<item name="actionBarTheme">@style/AppTheme.ActionBar</item>
+		<item name="alertDialogTheme">@style/AppTheme.Dialog</item>
+	</style>
+	<style name="AppTheme.Button"
+		   parent="Widget.AppCompat.Button">
+		<item name="android:textColor">@color/button_text</item>
+	</style>
+	<style name="AppTheme.EditText"
+		   parent="Widget.AppCompat.EditText">
+		<item name="android:textColorPrimary">@color/edittext_text</item>
+		<item name="android:textColorHint">@color/edittext_hint</item>
+	</style>
+	<style name="AppTheme.Menu"
+		   parent="Widget.AppCompat.PopupMenu.Overflow">
+		<item name="android:popupBackground">@drawable/rounded_background</item>
+		<item name="colorControlNormal">@color/highlight</item>
+		<item name="colorControlHighlight">@color/highlight</item>
+		<item name="colorControlActivated">@color/highlight</item>
+	</style>
+	<style name="AppTheme.Menu.TextAppearance"
+		   parent="TextAppearance.AppCompat.Menu">
+		<item name="android:textColor">@color/highlight_secondary</item>
+	</style>
+	<style name="AppTheme.ActionBar"
+		   parent="Widget.AppCompat.Light.ActionBar">
+		<item name="actionModeBackground">@color/highlight</item>
+		<item name="android:textColor">@color/text_inverse</item>
+		<item name="android:textColorPrimary">@color/text_inverse</item>
+		<item name="actionMenuTextColor">@color/text_inverse</item>
+		<item name="colorControlNormal">@color/text_inverse</item>
+		<item name="colorControlHighlight">@color/highlight_secondary</item>
+		<item name="colorControlActivated">@color/highlight_secondary</item>
+	</style>
+	<style name="AppTheme.Dialog"
+		   parent="Theme.AppCompat.Light.Dialog">
+		<item name="windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+		<item name="windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+		<item name="android:windowBackground">@drawable/rounded_background</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textColorPrimary">@color/text</item>
+		<item name="android:textColorHighlight">@color/highlight</item>
+		<item name="colorPrimary">@color/highlight</item>
+		<item name="colorPrimaryDark">@color/highlight_dark</item>
+		<item name="colorAccent">@color/highlight_secondary</item>
+		<item name="colorControlNormal">@color/highlight</item>
+		<item name="colorControlHighlight">@color/highlight</item>
+		<item name="colorControlActivated">@color/highlight</item>
+		<item name="editTextStyle">@style/AppTheme.EditText</item>
+		<item name="actionBarTheme">@style/AppTheme.ActionBar</item>
+	</style>
+
+	<style name="AppTheme.Login"
+		   parent="Theme.AppCompat.Light.NoActionBar">
+		<item name="android:windowBackground">@color/background</item>
+		<item name="android:textColor">@color/text</item>
+		<item name="android:textColorPrimary">@color/title</item>
+		<item name="android:textColorHighlight">@color/highlight</item>
+		<item name="colorPrimary">@color/highlight</item>
+		<item name="colorPrimaryDark">@color/highlight_dark</item>
+		<item name="colorAccent">@color/highlight_secondary</item>
+		<item name="colorControlNormal">@color/highlight</item>
+		<item name="colorControlHighlight">@color/highlight</item>
+		<item name="colorControlActivated">@color/highlight</item>
+		<item name="colorButtonNormal">@color/highlight_secondary</item>
+		<item name="buttonStyle">@style/AppTheme.Button</item>
+		<item name="editTextStyle">@style/AppTheme.EditText</item>
+		<item name="actionBarTheme">@style/AppTheme.ActionBar</item>
+	</style>
+	<style name="AppTheme.EditText.MessageCompose">
+		<item name="backgroundTint">@color/text_inverse</item>
+		<item name="android:textColorPrimary">@color/text_inverse</item>
+		<item name="colorControlNormal">@color/text_inverse</item>
+		<item name="colorControlHighlight">@color/text_inverse</item>
+		<item name="colorControlActivated">@color/text_inverse</item>
+	</style>
+</resources>

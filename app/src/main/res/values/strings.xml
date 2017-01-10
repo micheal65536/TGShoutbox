@@ -1,0 +1,26 @@
+<resources>
+	<string name="app_name">Therian Guide</string>
+
+	<string name="therian_guide">Therian Guide</string>
+	<string name="username">Username</string>
+	<string name="password">Password</string>
+	<string name="login">Log in</string>
+	<string name="logout">Log out</string>
+
+	<string name="choose_recipient">Choose recipient</string>
+	<string name="cancel_private_shout">Cancel private shout</string>
+	<string name="action">Action</string>
+	<string name="message">Message</string>
+	<string name="send">Send</string>
+	<string name="send_failed">Send failed</string>
+	<string name="user_not_found">User not found</string>
+
+	<string name="private_shout_to">Private shout to:&#160;</string>
+
+	<string name="refresh">Refresh</string>
+	<string name="refresh_message">Most of the time, you do not need to use this option as the shoutbox should refresh automatically. Use this option only if you specifically need to reload the entire shoutbox.</string>
+
+	<string name="close">Close</string>
+	<string name="ok">OK</string>
+	<string name="cancel">Cancel</string>
+</resources>

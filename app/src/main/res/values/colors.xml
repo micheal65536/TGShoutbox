@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="semi_transparent">#40000000</color>
+
+	<color name="background">#ebe6df</color>
+	<color name="text">#000000</color>
+	<color name="text_light">#404040</color>
+	<color name="text_inverse">#ffffff</color>
+	<color name="highlight">#546842</color>
+	<color name="highlight_dark">#445435</color>
+	<color name="highlight_secondary">#5d2c29</color>
+	<color name="title">#ffffff</color>
+
+	<color name="button_text">@color/text_inverse</color>
+	<color name="edittext_text">@color/highlight_secondary</color>
+	<color name="edittext_hint">@color/text_light</color>
+
+	<color name="message_dividers">@color/highlight_secondary</color>
+	<color name="message_default">@color/text</color>
+	<color name="message_action">#ff0000</color>
+	<color name="message_private">#6495ed</color>
+	<color name="message_link">#6b655c</color>
+	<color name="message_compose">@color/highlight_secondary</color>
+</resources>
