@@ -20,6 +20,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.Semaphore;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -52,6 +53,7 @@ public class Session implements Parcelable
 	private String mCookieSID = "";
 	private String mCookieMYBBUSER = "";
 	private long mLastId = 0;
+	private Semaphore mUpdateLock = new Semaphore(1);
 
 	public boolean authenticate(String username, String password)
 	{
@@ -140,6 +142,8 @@ public class Session implements Parcelable
 			@Override
 			protected List<Message> doInBackground(Void... voids)
 			{
+				Session.this.mUpdateLock.acquireUninterruptibly();
+
 				if (!Session.this.mAuthenticated)
 				{
 					return null;
@@ -277,6 +281,8 @@ public class Session implements Parcelable
 						receiver.onEndShoutboxUpdate();
 					}
 				}
+
+				Session.this.mUpdateLock.release();
 			}
 		}.execute();
 	}
