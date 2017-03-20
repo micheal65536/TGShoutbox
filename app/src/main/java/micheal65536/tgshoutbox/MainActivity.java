@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements UpdateReceiver
 		setContentView(R.layout.activity_main);
 
 		this.mAdapter = new messageAdapter(this);
-		ListView messages = ((ListView) findViewById(R.id.listview_messages));
+		final MessageListView messages = ((MessageListView) findViewById(R.id.listview_messages));
 		messages.setAdapter(this.mAdapter);
 		messages.setOnItemClickListener(new AdapterView.OnItemClickListener()
 		{
@@ -253,6 +253,15 @@ public class MainActivity extends AppCompatActivity implements UpdateReceiver
 				this.mAdapter.add(message);
 			}
 			this.mAdapter.notifyDataSetChanged();
+			final int last_visible_message = savedInstanceState.getInt("lastVisibleMessage");
+			messages.post(new Runnable()
+			{
+				@Override
+				public void run()
+				{
+					messages.scrollToMessage(last_visible_message);
+				}
+			});
 
 			set_action(savedInstanceState.getBoolean("isAction"));
 			set_pm(savedInstanceState.getLong("PMRecipient"), false);
@@ -328,6 +337,7 @@ public class MainActivity extends AppCompatActivity implements UpdateReceiver
 			messages[index] = this.mAdapter.getItem(index);
 		}
 		outState.putParcelableArray("messages", messages);
+		outState.putInt("lastVisibleMessage", ((ListView) findViewById(R.id.listview_messages)).getLastVisiblePosition());
 
 		outState.putBoolean("isAction", this.currentIsAction);
 		outState.putLong("PMRecipient", this.currentPMRecipient);

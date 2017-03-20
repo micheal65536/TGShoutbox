@@ -36,4 +36,19 @@ public class MessageListView extends ListView
 			setSelectionFromTop(last_item, h - item_height);
 		}
 	}
+
+	public void scrollToMessage(final int index)
+	{
+		final int h = getHeight();
+		setSelectionFromTop(index, h);
+		post(new Runnable()
+		{
+			@Override
+			public void run()
+			{
+				int item_height = getChildAt(index - getFirstVisiblePosition()).getHeight();
+				setSelectionFromTop(index, h - item_height);
+			}
+		});
+	}
 }
